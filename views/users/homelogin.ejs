@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../public/stylesheet/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section id="title">
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-warning" href="#">HIRE TO BUILD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item ms-3">
+              <!-- <a class="btn btn-outline-warning" href="/edit?id=<%=user.id%>" role="button"><%=user.name%></a> -->
+              <a class="btn btn-outline-warning" href="/logout" role="button">LOGOUT</a>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ------------------------------------------------- -->
+    <!-- position-absolute top-50 start-50 -->
+    <!--  -->
+    <div class="position-absolute top-50 start-50 translate-middle">
+      <h1 class="text-light">Welcome <span class="text-warning"><%=user.name%></span></h1>
+      <h2 class="text-light"></h2>
+      <button class="btn btn-outline-warning btn-lg ms-3"><a href="/search" class="mylinkbut">Hire Now</a></button>
+      <button class="btn btn-outline-warning btn-lg ms-3"><a href="/edit?id=<%=user.id%>" class="mylinkbut">Update Profile</a></button>
+    </div>
+  </section>
+
+
+
+<div class="container">
+  <section id="services">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <div class="container bootstrap snippets bootdey">
+      <section id="services" class="current">
+        <div class="services-top">
+          <div class="container bootstrap snippets bootdey">
+            <div class="row text-center">
+              <div class="col-sm-12 col-md-12 col-md-12">
+                <h2>What We Offer</h2>
+                <h2 style="font-size: 60px;line-height: 60px;margin-bottom: 20px;font-weight: 900;">Our Services</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-offset-1 col-sm-12 col-md-12 col-md-10">
+                <div class="services-list">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4 col-md-4">
+                      <div class="service-block" style="visibility: visible;">
+                        <div class="ico fa-solid fa-clock"></div>
+                        <div class="text-block">
+                          <div class="name">Time Saving</div>
+                          <div class="info">Efficient and easy</div>
+                          <div class="text">Hire To Build is designed to save you time and energy when searching for a
+                            hardware repair worker. Our platform makes it easy for clients to find skilled and
+                            experienced workers in their area. With just a few clicks, you can view worker profiles,
+                            contact them directly, and discuss your hardware repair needs. </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-md-4">
+                      <div class="service-block" style="visibility: visible;">
+                        <div class="ico fa-solid fa-face-laugh-beam"></div>
+                        <div class="text-block">
+                          <div class="name">Easy To Use</div>
+                          <div class="info">Quality code that lasts</div>
+                          <div class="text">Hire To Build's platform is designed with ease of use in mind. With a
+                            user-friendly interface, clients and workers can navigate and use our platform with ease,
+                            providing a seamless experience for all </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-md-4">
+                      <div class="service-block" style="visibility: visible;">
+                        <div class="ico fa-solid fa-eye"></div>
+                        <div class="text-block">
+                          <div class="name">Transparency</div>
+                          <div class="info">Words that tell your story</div>
+                          <div class="text">At Hire To Build, transparency and trust are our top priorities. Our
+                            platform provides an open and honest communication channel between clients and workers,
+                            ensuring a transparent and trustworthy experience for all. </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-md-4">
+                      <div class="service-block" style="visibility: visible;">
+                        <div class="ico fa-solid fa-hand-holding-dollar"></div>
+                        <div class="text-block">
+                          <div class="name">Flexible Pricing</div>
+                          <div class="info">Direct Communication Between Workers and Clients</div>
+                          <div class="text">Hire To Build offers a direct communication gateway between workers and
+                            clients, allowing for a more flexible pricing arrangement. Clients and workers can mutually
+                            agree on the cost of services, providing a customized and cost-effective solution for both
+                            parties. With Hire To Build, you have the freedom to negotiate and agree on the best price
+                            for your hardware repair services. </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-md-4">
+                      <div class="service-block" style="visibility: visible;">
+                        <div class="ico fa-solid fa-shield-halved"></div>
+                        <div class="text-block">
+                          <div class="name">Security and Privacy</div>
+                          <div class="info">Protecting Your Information</div>
+                          <div class="text">At Hire To Build, we take security and privacy seriously. Our platform
+                            implements the latest technology and measures to protect your personal information</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-md-4">
+                      <div class="service-block" style="visibility: visible;">
+                        <div class="ico fa-solid fa-people-group"></div>
+                        <div class="text-block">
+                          <div class="name">Connecting Local Communities</div>
+                          <div class="info">Supporting Local Workers</div>
+                          <div class="text">Hire To Build is committed to connecting local communities and supporting
+                            local workers. By providing a platform for clients to find and hire workers in their area,
+                            we help to strengthen local communities and support the local economy.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>
+ <!-- ABOUT -->
+ <section id="about">
+  <div class="container py-4 ">
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">About Us</h1><br>
+        <p class="col-md-8 fs-5">
+          "Hire To Build is a platform that offers an easy and convenient solution for all your hardware repair needs.
+          Whether you're in need of a repair or looking for work as a hardware repair worker, our platform has got you
+          covered. With our user-friendly interface, anyone can find a reliable worker to fix their hardware issues or
+          join as a worker and get hired by clients. Our platform connects clients with skilled and experienced
+          hardware repair workers, providing a seamless experience for both parties. Sign up today and discover the
+          benefits of Hire To Build."
+        </p>
+
+        <a href="#" style="text-decoration: none; color: black;"><i class="fa-brands fa-square-facebook"
+            style="font-size:40px"></i></a>
+        <a href="#" style="text-decoration: none; color: black;"><i class="fa-brands fa-square-instagram"
+            style="font-size:40px"></i></a>
+        <a href="#" style="text-decoration: none; color: black;"><i class="fa-brands fa-linkedin"
+            style="font-size:40px"></i></a>
+
+        <img src="" alt="">
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark bg-dark rounded-3 text-light">
+          <h2>Find Workers Easily</h2>
+          <p>
+            Discover the best hardware repair workers in your city with Hire To Build. Our platform makes it easy for
+            you to find workers and get in touch with them directly. Simply search for workers based on your location,
+            view their profiles and contact them to discuss your hardware repair needs. Hire To Build provides a
+            seamless experience for clients looking for hardware repair services, without the hassle of a complicated
+            rating system. Start your search now and connect with the right worker for your need.
+          </p>
+
+          <!-- <button class="btn btn-outline-light" type="button">Example button</button> -->
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Searching For Work ?</h2>
+          <p>
+            Join the Hire To Build community as a hardware repair worker and showcase your skills to clients in need
+            of your services. To get started, simply go to our registration section and fill in your details,
+            including your area of expertise. After creating your account, you can log in and edit your profile
+            anytime you want. With Hire To Build, you'll have the opportunity to receive direct calls from potential
+            clients looking for your services. So, what are you waiting for? Sign up now and start expanding your
+            professional network with Hire To Build.
+          </p>
+          <!-- <button class="btn btn-outline-secondary" type="button">Example button</button> -->
+        </div>
+      </div>
+    </div>
+
+</section>
+<!-- --------------------------------------------------------- -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var typed = new Typed(".auto-type", {
+    strings: ["Electrician", "Carpenter", "Repair Work", "Builder"],
+    typeSpeed: 150,
+    backSpeed: 150,
+    loop: true
+  })
+</script>
+
+</body>
+
+</html>

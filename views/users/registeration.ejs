@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../public/stylesheet/customstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- required -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../public/scripts/service.js"></script>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-warning" href="/index">HIRE TO BUILD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item ms-3">
+                <a class="btn btn-outline-warning" href="/login" role="button">LOGIN</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="btn btn-outline-warning" href="/login" role="button">REGISTER</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- ------------------------------------------------- -->
+
+
+    <section class="h-100 h-custom" style="background-color: #FFC107;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="card rounded-3">
+                        <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+                            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                            alt="Sample photo"> -->
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration For Workers</h3>
+                            <br>
+                            <%
+                            if(typeof message != 'undefined')
+                            {
+                                %>
+                                    <h4 style="color: red;"><%=message%></h4>
+                                <%
+
+                            }
+                            %>
+                     <%
+                     if(typeof regsucmessage != 'undefined')
+                     {
+                         %>
+                             <h4 style="color: green;"><%=regsucmessage%></h4>
+                             <h4>Click To Go To Login Page <a href="/login">Login Now!</a></h4>
+                         <%
+
+                     }
+              %>
+                     <br>
+
+                            <!-- personal details -->
+
+                            <h6 class="mb-4 pb-2 pb-md-0  px-md-2">Personal Detail</h6>
+
+
+                            <form class="px-md-2" action="" method="POST" enctype="multipart/form-data">
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1q">Name*</label>
+                                    <input type="text" name="name" id="form3Example1q" class="form-control"  required/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1q">Email*</label>
+                                    <input type="email" name="email" id="form3Example1q" class="form-control"  required/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1q">Upload Photo*</label>
+                                    <input type="file" name="image" id="form3Example1q" class="form-control" required/>
+                                </div>
+
+                                <div class="row">
+                                    <div class="mb-4">
+                                        <label class="form-label" for="form3Example1q">Gender*</label>
+
+                                        <select class="form-select" name="gender" aria-label="Default select example" required>
+                                            <option selected>Select Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1q">Mobile No.*</label>
+                                    <input type="number" name="mno" id="form3Example1q" class="form-control" required />
+                                </div>
+                                <br>
+
+                                <!-- location details -->
+
+                                <h6 class="mb-4 pb-2 pb-md-0  px-md-2">Location Detail</h6>
+
+
+                                <div class="mb-4">
+                                    <label class="form-label" for="form3Example1q">Country*</label>
+
+                                    <select class="form-select" name="country" aria-label="Default select example" id="country"
+                                        required>
+                                        <option selected>Select Country</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label" for="form3Example1q">State*</label>
+
+                                    <select class="form-select" name="state" aria-label="Default select example" id="state" required>
+                                        <option selected>Select State</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label" for="form3Example1q">City*</label>
+
+                                    <select class="form-select" name="city" aria-label="Default select example" id="city" required>
+                                        <option selected>Select City</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1q">Pincode*</label>
+                                    <input type="text" name="pincode" id="form3Example1q" class="form-control"  required/>
+                                </div>
+                                <br>
+
+
+                                <!-- Working Field -->
+
+                                <h6 class="mb-4 pb-2 pb-md-0  px-md-2">Working Detail</h6>
+
+                                <div class="mb-4">
+                                    <label class="form-label" for="form3Example1q">Expertise in workfield*</label>
+
+                                    <select class="form-select" name="workfield" aria-label="Default select example" required>
+                                        <option value="">Select workfield</option>
+                                        <option value="General Contractor">General Contractor</option>
+                                        <option value="Carpenter">Carpenter</option>
+                                        <option value="Electrician">Electrician</option>
+                                        <option value="Plumber">Plumber</option>
+                                        <option value="Painter">Painter</option>
+                                        <option value="Roofer">Roofer</option>
+                                        <option value="Mason">Mason</option>
+                                        <option value="Drywall Installer">Drywall Installer</option>
+                                        <option value="Flooring Specialist">Flooring Specialist</option>
+                                        <option value="Landscaper">Landscaper</option>
+                                        <option value="HVAC Technician">HVAC Technician</option>
+                                        <option value="Windows and Door Installer">Windows and Door Installer</option>
+                                        <option value="Carpenter Assistant">Carpenter Assistant</option>
+                                        <option value="Demolition Specialist">Demolition Specialist</option>
+                                        <option value="Concrete Finisher">Concrete Finisher</option>
+                                        <option value="Excavator">Excavator</option>
+                                        <option value="Insulation Specialist">Insulation Specialist</option>
+                                        <option value="Tiler">Tiler</option>
+                                        <option value="Land Surveyor">Land Surveyor</option>
+                                        <option value="Structural Engineer">Structural Engineer</option>
+                                        <option value="Architect">Architect</option>
+                                        <option value="Interior Designer">Interior Designer</option>
+                                        <option value="Kitchen and Bathroom Remodeler">Kitchen and Bathroom Remodeler</option>
+                                        <option value="Lighting and Electrical Designer">Lighting and Electrical Designer</option>
+                                        <option value="Surveyor Assistant">Surveyor Assistant</option>
+                                    </select>
+
+                                </div>
+
+                                <!-- password -->
+                                <br>
+                                <h6 class="mb-4 pb-2 pb-md-0  px-md-2">Create Password</h6>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1q">Enter Password*</label>
+                                    <input type="password" name="password" id="form3Example1q" class="form-control"  required/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1q">Confirm Password*</label>
+                                    <input type="password" name="cpassword" id="form3Example1q" class="form-control"  required/>
+                                </div>
+
+                                
+
+                               
+                                
+
+
+
+
+                                <br>
+                                <button type="submit" value="register" class="btn btn-warning btn-lg mb-1">REGISTER</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
