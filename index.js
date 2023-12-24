@@ -1,11 +1,9 @@
 const mongoose=require("mongoose");
 mongoose
-// .connect("mongodb+srv://hiretobuild:hardwarebuilder2002@cluster0.dwbedbc.mongodb.net/?retryWrites=true&w=majority"
-.connect("mongodb://127.0.0.1:27017/pleasemakedb"
+.connect("mongodb://127.0.0.1:27017/UserDb"
 // ,{
 //     useUnifiedTopology: true,
 //     autoIndex: true,
-//mongodb://127.0.0.1:27017/pleasemakedb"
 // }
 )
 .then(()=>console.log("Mongodb Connected"))
